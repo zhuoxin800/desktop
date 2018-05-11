@@ -36,3 +36,8 @@ export function enableMergeTool(): boolean {
 export function enableNotificationOfBranchUpdates(): boolean {
   return enableBetaFeatures()
 }
+
+/** Should Desktop use the new troubleshooting flow */
+export function enableSSHTroubleshooting(): boolean {
+  return enableDevelopmentFeatures()
+}

@@ -223,6 +223,7 @@ export enum PopupType {
   UpstreamAlreadyExists,
   DeletePullRequest,
   MergeConflicts,
+  TroubleshootSSH,
 }
 
 export type Popup =
@@ -298,6 +299,10 @@ export type Popup =
       pullRequest: PullRequest
     }
   | { type: PopupType.MergeConflicts; repository: Repository }
+  | {
+      type: PopupType.TroubleshootSSH
+      repository: Repository
+    }
 
 export enum FoldoutType {
   Repository,
